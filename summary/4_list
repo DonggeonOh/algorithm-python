@@ -1,0 +1,26 @@
+리스트 범위 지정
+[0:2]   # 0부터 2 미만
+[:6]    # 처음부터 6 미만
+[7:]   # 7번째 부터 끝까지
+[-7:]   # 맨뒤에서 7번째 부터 끝까지
+
+
+
+---
+리스트 추가
+list = [0, 1, 2]
+
+list.append(element)
+list.insert(index, element)
+list.pop() # 맨 뒤의 값을 빼고 값 반환
+list.sort() # 오름차순 정렬 reverse=False 기본
+list.sort(reverse=True) # 내림차순
+list.reverse() # 순서 뒤집기
+list.clear() # 모든 값 지우기
+list.extend(list) # 해당 인자의 리스트와 합쳐짐
+
+
+
+---
+리스트에 다양한 자료형 추가 가능
+list = [1, True, 'Hi']
