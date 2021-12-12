@@ -4,7 +4,7 @@ from math import *  # math 라이브러리 안에 있는 모든 함수 불러오
 print(floor(3.14))  # 내림
 print(ceil(3.14))  # 올림
 print(sqrt(16))  # 제곱근 - 16의 제곱근 4
-
+print(round(3.1415926, 3))  # 소수점 셋째자리 까지
 
 # 랜덤 관련 라이브러리
 from random import *
