@@ -7,6 +7,7 @@ def mark_and_toys(prices, money):
     @Link: https://www.hackerrank.com/challenges/mark-and-toys
     """
     answer = 0
+    
     for price in sorted(prices):
         if money > price:
             money -= price
