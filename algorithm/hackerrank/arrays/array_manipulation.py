@@ -30,10 +30,3 @@ def add_dict_prefix_sum(sum_dict, index, value):
         sum_dict[index] += value
     else:
         sum_dict.setdefault(index, value)
-
-
-def checkMagazine(magazine, note):
-    
-
-
-checkMagazine(['two', 'times', 'three', 'is', 'not', 'four'], ['two', 'times', 'two', 'is', 'four'])
