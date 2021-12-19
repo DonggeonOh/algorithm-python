@@ -31,13 +31,7 @@ def print_singly_linked_list(node, sep, fptr):
 
 
 def insert_node_at_position(llist, data, position):
-    """
-    
-    :param llist:
-    :param data:
-    :param position:
-    :return:
-    """
+    """ 해커랭크 Insert a node at a specific position in a linked list 솔루션 """
     new_list = SinglyLinkedListNode(data)
     head = llist
 
