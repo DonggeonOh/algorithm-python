@@ -10,8 +10,6 @@ def array_manipulation(queries):
     answer = 0
     temp = 0
 
-    asdf = "asdf"
-
     for query in queries:
         start_index, end_index, value = query
 
