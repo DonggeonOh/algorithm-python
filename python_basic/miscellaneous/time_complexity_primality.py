@@ -1,3 +1,6 @@
+from math import sqrt
+
+
 def primality(n):
     prime_str = "Prime"
     not_prime_str = "Not prime"
