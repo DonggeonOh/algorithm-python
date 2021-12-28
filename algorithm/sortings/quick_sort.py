@@ -31,7 +31,3 @@ def quick_sort(values):
 
         stack.append((start, right - 1))
         stack.append((right + 1, end))
-
-test = [5, 1, 2, 4, 8, 10]
-
-quick_sort(test)
