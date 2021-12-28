@@ -7,5 +7,3 @@ def selection_sort(values):
                 minindex = targetindex
 
         values[minindex], values[swapindex] = values[swapindex], values[minindex]
-
-    return values
