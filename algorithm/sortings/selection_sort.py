@@ -1,4 +1,4 @@
-def insert_sort(values):
+def selection_sort(values):
     for swapindex in range(len(values)):
         minindex = swapindex
 
