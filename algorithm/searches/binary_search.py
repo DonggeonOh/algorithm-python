@@ -1,6 +1,3 @@
-from math import ceil
-
-
 def binary_search(seq, target):
     """
     이진 탐색은 정렬되어 있는 값여야 수행 가능하다.
