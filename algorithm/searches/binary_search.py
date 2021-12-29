@@ -19,4 +19,4 @@ def binary_search(seq, target):
         else:
             return mid
 
-    return -1
+    return None

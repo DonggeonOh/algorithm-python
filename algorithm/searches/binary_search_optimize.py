@@ -9,6 +9,9 @@ def binary_search_optimize(seq, target):
     :param target: input 에서 찾으려고 하는 값
     :return target이 위치한 index 반환
     """
+    if not seq:
+        return None
+
     low = 0
     high = len(seq) - 1
 
@@ -23,4 +26,6 @@ def binary_search_optimize(seq, target):
     if seq[low] == target:
         return low
     else:
-        return -1
+        return None
+
+print(binary_search_optimize([], 2))
