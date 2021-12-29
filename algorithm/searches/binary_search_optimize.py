@@ -1,3 +1,6 @@
+from math import ceil
+
+
 def binary_search_optimize(seq, target):
     """
     위 이진탐색에서 비교문을 줄여 최적화한 이진탐색 알고리즘이다.
