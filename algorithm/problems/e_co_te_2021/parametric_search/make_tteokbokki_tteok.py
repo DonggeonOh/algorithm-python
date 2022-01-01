@@ -29,6 +29,3 @@ def make_tteokbokki_tteok(tteoks, length):
             return mid_length
 
     return max_length
-
-answer = make_tteokbokki_tteok([19, 15, 10, 17], 6)
-print(answer)
