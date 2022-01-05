@@ -1,6 +1,3 @@
-from sys import maxsize
-
-
 class MatrixGraph:
 
     def __init__(self, vertices):
