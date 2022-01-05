@@ -12,9 +12,10 @@ def dijkstra(graph, start, end):
         min_vertex = min_distance_vertex(shortest_distance, visited)
         visited.add(min_vertex)
 
-        for vertex, edge in enumerate(graph.edges(min_vertex)):
-            if edge and shortest_distance[min_vertex] + edge < shortest_distance[vertex]:
-                shortest_distance[vertex] = shortest_distance[min_vertex] + edge
+        if min_vertex is not None:
+            for vertex, edge in enumerate(graph.edges(min_vertex)):
+                if edge and shortest_distance[min_vertex] + edge < shortest_distance[vertex]:
+                    shortest_distance[vertex] = shortest_distance[min_vertex] + edge
 
     return None if shortest_distance[end] == maxsize else shortest_distance[end]
 
@@ -31,24 +32,23 @@ def min_distance_vertex(iter, visited):
 
 
 def dijkstra_min_heap(graph, start, end):
-    shortest_distance = [maxsize for _ in range(graph.len)]
+    shortest_distance = [maxsize for _ in range(len(graph))]
     heap = []
-    
-    heappush(heap, (0, start))
 
-    for _ in range(graph.len):
+    heappush(heap, (0, start))
+    shortest_distance[start] = 0
+
+    while heap:
         distance, min_vertex = heappop(heap)
 
-        for vertex, edge in enumerate(graph.edges(min_vertex)):
-            if edge and shortest_distance[min_vertex[0]][0] + edge < shortest_distance[vertex][0]:
-                shortest_distance[vertex][0] = (shortest_distance[min_vertex[0]][0] + edge, vertex)
+        if distance > shortest_distance[min_vertex]:
+            continue
+
+        for target_vertex, edge in graph[min_vertex]:
+            target_distance = shortest_distance[min_vertex] + edge
+
+            if target_distance < shortest_distance[target_vertex]:
+                shortest_distance[target_vertex] = target_distance
+                heappush(heap, (target_distance, target_vertex))
 
     return None if shortest_distance[end] == maxsize else shortest_distance[end]
-
-
-def init_shortest_distance_tuple_list(len, start):
-    result = [(maxsize, index) for index in range(len)]
-
-    result[0] = (0, start)
-
-    return result
