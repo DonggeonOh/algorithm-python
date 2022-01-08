@@ -15,7 +15,7 @@ def topological_sorting(graph):
     queue = deque()
     result = list()
 
-    for index in range(1, len(incoming_edges) + 1):
+    for index in range(1, len(incoming_edges)):
         if not incoming_edges[index]:
             queue.append(index)
 
@@ -23,21 +23,21 @@ def topological_sorting(graph):
         vertex = queue.popleft()
         result.append(vertex)
 
-        for next_vertex in graph[vertex]:
-            if next_vertex:
-                incoming_edges[next_vertex] -= 1
+        for index in range(1, len(graph[vertex])):
+            if graph[vertex][index]:
+                incoming_edges[index] -= 1
 
-                if not incoming_edges[next_vertex]:  # 다음 정점의 진입 차수가 0 인 경우 Queue 에 넣는다.
-                    queue.append(next_vertex)
+                if not incoming_edges[index]:  # 다음 정점의 진입 차수가 0 인 경우 Queue 에 넣는다.
+                    queue.append(index)
 
     return result
 
 
 def get_incoming_edges(graph):
-    incoming_edges = [0 for _ in range(len(graph) + 1)]
+    incoming_edges = [0 for _ in range(len(graph))]
 
-    for row in range(1, len(graph) + 1):
-        for col in range(1, len(graph[row]) + 1):
+    for row in range(1, len(graph)):
+        for col in range(1, len(graph[row])):
             if graph[row][col]:
                 incoming_edges[col] += 1
 
