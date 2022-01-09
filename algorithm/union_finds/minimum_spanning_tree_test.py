@@ -1,4 +1,4 @@
-from algorithm.union_find.minimum_spanning_tree import minimum_spanning_tree
+from algorithm.union_finds.minimum_spanning_tree import minimum_spanning_tree
 
 
 test_file = open("minimum_spanning_tree_test_data.txt", "r", encoding="utf8")

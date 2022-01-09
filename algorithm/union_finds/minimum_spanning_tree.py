@@ -1,4 +1,4 @@
-from algorithm.union_find.union_find import *
+from algorithm.union_finds.union_find import *
 
 
 def minimum_spanning_tree(graph):
