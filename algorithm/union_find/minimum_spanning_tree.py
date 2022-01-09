@@ -19,9 +19,6 @@ def minimum_spanning_tree(graph):
     for edge in sorted_edges:
         weight, vertex, next_vertex = edge
 
-        print(union_table)
-        print(weight, find_parent(union_table, vertex), find_parent(union_table, next_vertex))
-
         if find_parent(union_table, vertex) != find_parent(union_table, next_vertex):
             union_parent(union_table, vertex, next_vertex)
 
@@ -41,19 +38,3 @@ def sort_edges(graph):
     result.sort()
 
     return result
-
-
-test_file = open("minimum_spanning_tree_test_data.txt", "r", encoding="utf8")
-vertex, edge = map(int, test_file.readline().split())
-graph = [[0 for _ in range(vertex + 1)] for _ in range(vertex + 1)]
-
-for _ in range(edge):
-    v1, v2, e = map(int, test_file.readline().split())
-    graph[v1][v2] = e
-
-spanning_tree = minimum_spanning_tree(graph)
-
-for row in range(len(graph)):
-    print(spanning_tree[row])
-
-test_file.close()
