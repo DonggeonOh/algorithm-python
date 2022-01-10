@@ -22,3 +22,22 @@ def two_pointers(seq, target):
             end += 1
 
     return count
+
+
+def two_pointers_e_co_te(seq, target):
+    """이코테 2021 강의 자료에 나오는 투 포인터 구현 코드"""
+    count = 0
+    sum = 0
+    end = 0
+
+    for start in range(len(seq)):
+        while sum < target and end < len(seq):  # end 를 타겟 넘버 미만으로 가능한 만큼 끝까지 돌린다.
+            sum += seq[end]
+            end += 1
+
+        if sum == target:
+            count += 1
+
+        sum -= seq[start]
+
+    return count
