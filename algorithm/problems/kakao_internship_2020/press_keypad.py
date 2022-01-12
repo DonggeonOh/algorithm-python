@@ -2,6 +2,10 @@ def solution(numbers, hand):
     """
     카카오 인턴십 2020 코딩 테스트 키패드 누르기 솔루션
 
+    @Date: 2022/01/12
+    @Author: Oh Donggeon
+    @Link: https://programmers.co.kr/learn/courses/30/lessons/67256
+
     :param numbers: 누르는 키들의 정수 배열
     :param hand: 왼손잡이, 오른손잡이
     :return: 왼손으로 누르면 L, 오른손으로 누르면 R로 하여 키패드를 누른 손가락의 문자열 반환
