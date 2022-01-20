@@ -1,4 +1,10 @@
 def solution(result):
+    """
+    2018 카카오 블라인드 채용 코딩 테스트 다트 게임 솔루션
+
+    :param result: 다트 결과 문자열
+    :return: 총 점수
+    """
     scores = []
     temp_score = ""
     total_score = 0
