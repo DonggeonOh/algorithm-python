@@ -27,5 +27,3 @@ def binary_search_optimize(seq, target):
         return low
     else:
         return None
-
-print(binary_search_optimize([], 2))
