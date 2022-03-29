@@ -1,6 +1,7 @@
 def mock_test(answers):
     """
-    프로그래머스 코딩테스트 고득점 Kit 완전탐색 - 모의고사 솔루션
+    프로그래머스 코딩테스트 고득점 Kit
+    완전탐색: 모의고사 솔루션
 
     Author: Oh Donggeon
     Date: 2022/03/28
