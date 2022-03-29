@@ -1,7 +1,7 @@
 from math import ceil
 
 
-def solution(brown, yellow):
+def carpet(brown, yellow):
     """
     프로그래머스 코딩테스트 고득점 Kit
     완전탐색: 카펫 솔루션
